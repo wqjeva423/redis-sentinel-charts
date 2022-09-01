@@ -1,0 +1,25 @@
+global:
+  repository: 172.16.5.1:543
+  project: redis
+image: redis-sentinel-operator
+tag: v4.1
+pullPolicy: IfNotPresent
+containerName: redisoperator
+podAnnotations: {}
+resources:
+  requests:
+    cpu: 10m
+    memory: 50Mi
+  limits:
+    cpu: 100m
+    memory: 50Mi
+rbac:
+  install: true
+  apiVersion: v1
+  imagePullSecrets: []
+monitoring:
+  enabled: false
+  serviceMonitor: false
+  serviceAnnotations: {}
+  prometheus:
+    name: unknown

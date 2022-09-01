@@ -1,0 +1,5 @@
+show: true
+name: Redis Sentinel Operator
+description: redis sentinel Operator 为部署redis sentinel 提供CRDS和自定义controller。云管环境中，部署redis sentinel集群前，应先部署redis sentinel operator。
+single: true
+chartName: redis-sentinel-operator

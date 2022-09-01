@@ -1,5 +1,5 @@
 global:
-  repository: 172.16.5.1:543
+  repository: 172.16.5.67
   project: redis
 image: redis-sentinel-operator
 tag: v4.1

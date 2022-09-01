@@ -2,17 +2,17 @@ global:
   repository: 172.16.5.67
   project: redis
 image: redis-sentinel-operator
-tag: v4.1
+tag: v4.1.1
 pullPolicy: IfNotPresent
 containerName: redisoperator
 podAnnotations: {}
 resources:
   requests:
-    cpu: 10m
-    memory: 50Mi
-  limits:
     cpu: 100m
-    memory: 50Mi
+    memory: 100Mi
+  limits:
+    cpu: 200m
+    memory: 200Mi
 rbac:
   install: true
   apiVersion: v1

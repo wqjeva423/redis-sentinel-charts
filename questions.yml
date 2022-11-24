@@ -15,8 +15,26 @@ questions:
     type: string
     label: Redis Operator Image Name
   - variable: tag
-    default: "v4.1"
+    default: "v4.3.3"
     description: "Redis Operator tag"
     type: string
     label: Redis Operator Tag
+- variable: defaultImage
+  default: true
+  description: "Use default Docker image"
+  label: Use Default Image
+  type: boolean
+  show_subquestion_if: false
+  group: "Backup container Images"
+  subquestions:
+    - variable: image
+      default: "redis-backup-operator"
+      description: "Redis backup operator image name"
+      type: string
+      label: Redis Backup Operator Image Name
+    - variable: tag
+      default: "v1.4.2"
+      description: "Redis Backup Operator tag"
+      type: string
+      label: Redis Backup Operator Tag
 

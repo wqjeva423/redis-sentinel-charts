@@ -4,16 +4,16 @@ kind: ServiceAccount
 metadata:
   name: {{ include "name" . | quote }}
   labels:
-{{ include "common-labels" . | indent 4 }}
+  {{ include "common-labels" . | indent 4 }}
 imagePullSecrets:
-{{ toYaml .Values.rbac.imagePullSecrets | indent 2 }}
+  {{ toYaml .Values.rbac.imagePullSecrets | indent 2 }}
 ---
 apiVersion: rbac.authorization.k8s.io/{{ .Values.rbac.apiVersion }}
 kind: ClusterRole
 metadata:
   name: {{ include "name" . | quote }}
   labels:
-{{ include "common-labels" . | indent 4 }}
+  {{ include "common-labels" . | indent 4 }}
 rules:
   - apiGroups:
       - databases.spotahome.com
@@ -57,6 +57,104 @@ rules:
       - poddisruptionbudgets
     verbs:
       - "*"
+  - apiGroups:
+      - batch
+    resources:
+      - cronjobs
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - batch
+    resources:
+      - jobs
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - persistentvolumeclaims
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - persistentvolumes
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - operator.bobfintech.com
+    resources:
+      - redisbackups
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - operator.bobfintech.com
+    resources:
+      - redisbackups/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - operator.bobfintech.com
+    resources:
+      - redisbackups/status
+    verbs:
+      - get
+      - patch
+      - update
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/{{ .Values.rbac.apiVersion }}
@@ -70,4 +168,4 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: {{ include "name" . | quote }}
-{{ end }}
+  {{ end }}

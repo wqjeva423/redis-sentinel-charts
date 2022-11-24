@@ -2,21 +2,32 @@ global:
   repository: 172.16.5.67
   project: redis
 image: redis-sentinel-operator
-tag: v4.1.1
+tag: v4.3.3
 pullPolicy: IfNotPresent
 containerName: redisoperator
+backupContainerName: redisbackupoperator
+
+
+fullname: redis-sentinel-operator
+
+backupimage: redis-backup-operator
+backuptag: v1.4.2
+
 podAnnotations: {}
+
 resources:
   requests:
-    cpu: 100m
-    memory: 100Mi
+    cpu: 1
+    memory: 1Gi
   limits:
-    cpu: 200m
-    memory: 200Mi
+    cpu: 4
+    memory: 4Gi
+
 rbac:
   install: true
   apiVersion: v1
   imagePullSecrets: []
+
 monitoring:
   enabled: false
   serviceMonitor: false

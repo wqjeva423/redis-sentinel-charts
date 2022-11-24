@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "name" . | quote }}
+  name: {{ .Values.fullname }}
   labels:
     app.kubernetes.io/component: app
 {{ include "helm-labels" . | indent 4 }}
@@ -34,3 +34,8 @@ spec:
         - containerPort: 9710
           name: metrics
           protocol: TCP
+      - name: "{{ .Values.backupContainerName }}"
+        image: {{ .Values.global.repository }}/{{ .Values.global.project }}/{{ .Values.backupimage }}:{{ .Values.backuptag }}
+        imagePullPolicy: {{ .Values.pullPolicy }}
+        resources:
+{{ toYaml .Values.resources | indent 10 }}

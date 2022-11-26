@@ -13,6 +13,9 @@ fullname: redis-sentinel-operator
 backupimage: redis-backup-operator
 backuptag: v1.4.2
 
+sidecarimage: s3cmd
+sidecartag: latest
+
 podAnnotations: {}
 
 resources:

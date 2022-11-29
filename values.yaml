@@ -2,7 +2,7 @@ global:
   repository: 172.16.5.67
   project: redis
 image: redis-sentinel-operator
-tag: v4.3.3
+tag: v4.3.4-rc1
 pullPolicy: IfNotPresent
 containerName: redisoperator
 backupContainerName: redisbackupoperator
@@ -11,7 +11,7 @@ backupContainerName: redisbackupoperator
 fullname: redis-sentinel-operator
 
 backupimage: redis-backup-operator
-backuptag: v1.4.2
+backuptag: v1.4.3
 
 sidecarimage: s3cmd
 sidecartag: latest

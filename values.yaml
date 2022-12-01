@@ -11,7 +11,7 @@ backupContainerName: redisbackupoperator
 fullname: redis-sentinel-operator
 
 backupimage: redis-backup-operator
-backuptag: v1.4.3
+backuptag: v1.4.4
 
 sidecarimage: s3cmd
 sidecartag: latest

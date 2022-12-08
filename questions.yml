@@ -15,7 +15,7 @@ questions:
     type: string
     label: Redis Operator Image Name
   - variable: tag
-    default: "v4.3.3"
+    default: "v4.3.5"
     description: "Redis Operator tag"
     type: string
     label: Redis Operator Tag
@@ -33,7 +33,7 @@ questions:
       type: string
       label: Redis Backup Operator Image Name
     - variable: tag
-      default: "v1.4.2"
+      default: "v1.4.6"
       description: "Redis Backup Operator tag"
       type: string
       label: Redis Backup Operator Tag

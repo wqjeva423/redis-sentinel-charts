@@ -3510,6 +3510,8 @@ spec:
                     type: object
                   priorityClassName:
                     type: string
+                  redisVersion:
+                    type: string
                   replicas:
                     format: int32
                     type: integer
@@ -7502,6 +7504,8 @@ spec:
                       type: string
                     type: object
                   priorityClassName:
+                    type: string
+                  redisVersion:
                     type: string
                   replicas:
                     format: int32

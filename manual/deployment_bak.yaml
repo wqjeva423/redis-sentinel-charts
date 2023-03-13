@@ -26,17 +26,8 @@ spec:
 {{- end }}
       containers:
       - name: "{{ .Values.containerName }}"
-        image: {{ .Values.image }}
+        image: {{ .Values.global.repository }}/{{ .Values.global.project }}/{{ .Values.image }}:{{ .Values.tag }}
         imagePullPolicy: {{ .Values.pullPolicy }}
-        env:
-          - name: backup_image
-            value: { { .Values.sidecarimage } }
-          - name: redis5_image
-            value: { { .Values.redis5image } }
-          - name: redis6_image
-            value: { { .Values.redis6image } }
-          - name: exporter_image
-            value: { { .Values.exporterimage } }
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:
@@ -44,16 +35,14 @@ spec:
           name: metrics
           protocol: TCP
       - name: "{{ .Values.backupContainerName }}"
-        image: {{ .Values.backupimage }}
+        image: {{ .Values.global.repository }}/{{ .Values.global.project }}/{{ .Values.backupimage }}:{{ .Values.backuptag }}
         imagePullPolicy: {{ .Values.pullPolicy }}
         env:
           - name: backup_image
-            value: {{ .Values.sidecarimage }}
+            value: {{ .Values.global.repository }}/{{ .Values.global.project }}/{{ .Values.sidecarimage }}:{{ .Values.sidecartag }}
           - name: redis5_image
-            value: {{ .Values.redis5image }}
+            value: { { .Values.global.repository } }/{{ .Values.global.project }}/{{ .Values.redis5image }}:{{ .Values.redis5tag }}
           - name: redis6_image
-            value: {{ .Values.redis6image }}
-          - name: exporter_image
-            value: {{ .Values.exporterimage }}
+            value: { { .Values.global.repository } }/{{ .Values.global.project }}/{{ .Values.redis6image }}:{{ .Values.redis6tag }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}

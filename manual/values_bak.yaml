@@ -10,14 +10,16 @@ backupContainerName: redisbackupoperator
 fullname: redis-sentinel-operator
 
 backupimage: redis-backup-operator
+backuptag: v1.4.6
 
 redis5image: redis
+redis5tag: 5.0
 
 redis6image: redis
+redis6tag: 6.0
 
 sidecarimage: s3cmd
-
-exporterimage: exporter
+sidecartag: latest
 
 podAnnotations: {}
 

@@ -1,40 +1,41 @@
 categories:
 - key-value
 questions:
-- variable: defaultImage
-  default: true
-  description: "Use default Docker image"
-  label: Use Default Image
-  type: boolean
-  show_subquestion_if: false
+- variable: image
+  default: "172.16.5.67/redis/redis-sentinel-operator:v4.3.6-rc2"
+  description: "Redis-Sentinel-Operator镜像地址"
+  type: string
+  label: Redis Sentinel Operator Image
   group: "Container Images"
-  subquestions:
-  - variable: image
-    default: "redis-sentinel-operator"
-    description: "Redis Operator image name"
-    type: string
-    label: Redis Operator Image Name
-  - variable: tag
-    default: "v4.3.5"
-    description: "Redis Operator tag"
-    type: string
-    label: Redis Operator Tag
-- variable: defaultImage
-  default: true
-  description: "Use default Docker image"
-  label: Use Default Image
-  type: boolean
-  show_subquestion_if: false
-  group: "Backup container Images"
-  subquestions:
-    - variable: image
-      default: "redis-backup-operator"
-      description: "Redis backup operator image name"
-      type: string
-      label: Redis Backup Operator Image Name
-    - variable: tag
-      default: "v1.4.6"
-      description: "Redis Backup Operator tag"
-      type: string
-      label: Redis Backup Operator Tag
+- variable: backupimage
+  default: "172.16.5.67/redis/redis-backup-operator:v1.4.6"
+  description: "Redis-Backup-Operator镜像地址"
+  type: string
+  label: Redis Backup Operator Image
+  group: "Container Images"
+- variable: sidecarimage
+  default: "172.16.5.67/redis/s3cmd:v2.0.0"
+  description: "S3cmd镜像地址"
+  type: string
+  label: S3cmd Image
+  group: "Container Images"
+- variable: redis5image
+  default: "172.16.5.67/redis/redis:5.0"
+  description: "Redis5.0镜像地址"
+  type: string
+  label: Redis 5.0 image
+  group: "Container Images"
+- variable: redis6image
+  default: "172.16.5.67/redis/redis:6.0"
+  description: "Redis6.0镜像地址"
+  type: string
+  label: Redis 6.0 image
+  group: "Container Images"
+- variable: exporterimage
+  default: "172.16.5.67/redis/v1.3.5-alpine"
+  description: "Redis-exporter镜像地址"
+  type: string
+  label: redis exporter image
+  group: "Container Images"
+
 

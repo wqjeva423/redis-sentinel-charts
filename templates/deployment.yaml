@@ -30,13 +30,13 @@ spec:
         imagePullPolicy: {{ .Values.pullPolicy }}
         env:
           - name: backup_image
-            value: { { .Values.sidecarimage } }
+            value: {{ .Values.sidecarimage }}
           - name: redis5_image
-            value: { { .Values.redis5image } }
+            value: {{ .Values.redis5image }}
           - name: redis6_image
-            value: { { .Values.redis6image } }
+            value: {{ .Values.redis6image }}
           - name: exporter_image
-            value: { { .Values.exporterimage } }
+            value: {{ .Values.exporterimage }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:

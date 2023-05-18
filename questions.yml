@@ -2,19 +2,19 @@ categories:
 - key-value
 questions:
 - variable: image
-  default: "172.16.5.67/redis/redis-sentinel-operator:v4.3.6-rc2"
+  default: "172.16.5.67/redis/redis-sentinel-operator:v4.3.8"
   description: "Redis-Sentinel-Operator镜像地址"
   type: string
   label: Redis Sentinel Operator Image
   group: "Container Images"
 - variable: backupimage
-  default: "172.16.5.67/redis/redis-backup-operator:v1.4.6"
+  default: "172.16.5.67/redis/redis-backup-operator:v2.1.0"
   description: "Redis-Backup-Operator镜像地址"
   type: string
   label: Redis Backup Operator Image
   group: "Container Images"
 - variable: sidecarimage
-  default: "172.16.5.67/redis/s3cmd:v2.0.0"
+  default: "172.16.5.67/redis/s3cmd:v3.0.0"
   description: "S3cmd镜像地址"
   type: string
   label: S3cmd Image

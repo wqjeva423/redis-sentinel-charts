@@ -21,6 +21,15 @@ spec:
 {{ toYaml .Values.podAnnotations | indent 8 }}
 {{- end }}
     spec:
+{{- if .Values.xc.enable }}
+      nodeSelector:
+        cn.com.bobfintech.cce.node_xc: "true"
+      tolerations:
+      - key: "cn.com.bobfintech.cce.taint_xc"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+{{- end }}
 {{- if .Values.rbac.install }}
       serviceAccountName: {{ include "name" . | quote }}
 {{- end }}

@@ -40,3 +40,6 @@ monitoring:
   serviceAnnotations: {}
   prometheus:
     name: unknown
+
+xc:
+  enable: true

@@ -1,6 +1,13 @@
 categories:
 - key-value
 questions:
+- variable: xc.enable
+  default: true
+  description: "是否部署在信创节点"
+  type: boolean
+  label: 是否部署在信创节点
+  group: "Redis Operator Settings"
+  required: true
 - variable: image
   default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-sentinel-operator:v4.3.8"
   description: "Redis-Sentinel-Operator镜像地址"
@@ -37,11 +44,4 @@ questions:
   type: string
   label: redis exporter image
   group: "Container Images"
-- variable: xc.enable
-  default: true
-  description: "是否部署在信创节点"
-  type: boolean
-  label: 是否部署在信创节点
-  group: "Redis Operator Settings"
-  required : true
 

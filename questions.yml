@@ -39,7 +39,7 @@ questions:
   label: Redis 6.0 image
   group: "Container Images"
 - variable: exporterimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/v1.3.5-alpine"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_exporter:v1.3.5-alpine"
   description: "Redis-exporter镜像地址"
   type: string
   label: redis exporter image

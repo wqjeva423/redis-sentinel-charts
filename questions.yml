@@ -15,7 +15,7 @@ questions:
   label: Redis Sentinel Operator Image
   group: "Container Images"
 - variable: backupimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-backup-operator:v2.1.0"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-backup-operator:v2.1.1"
   description: "Redis-Backup-Operator镜像地址"
   type: string
   label: Redis Backup Operator Image

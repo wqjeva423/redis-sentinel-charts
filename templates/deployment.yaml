@@ -46,6 +46,10 @@ spec:
             value: {{ .Values.redis6image }}
           - name: exporter_image
             value: {{ .Values.exporterimage }}
+          - name: tools_image
+            value: {{ .Values.toolsimage }}
+          - name: topkey_image
+            value: {{ .Values.topkeyimage }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:

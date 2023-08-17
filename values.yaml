@@ -19,6 +19,10 @@ sidecarimage: s3cmd
 
 exporterimage: exporter
 
+toolsimage: tools
+
+topkeyimage: topkey
+
 podAnnotations: {}
 
 resources:

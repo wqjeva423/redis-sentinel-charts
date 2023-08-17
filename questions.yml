@@ -44,4 +44,16 @@ questions:
   type: string
   label: redis exporter image
   group: "Container Images"
+- variable: toolsimage
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_tools:v0.2.1"
+  description: "Redis-tools镜像地址"
+  type: string
+  label: redis tools image
+  group: "Container Images"
+- variable: topkeyimage
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_topkeys:v0.1.5"
+  description: "Redis-topkey镜像地址"
+  type: string
+  label: redis topkey image
+  group: "Container Images"
 

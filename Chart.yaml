@@ -4,4 +4,4 @@ icon: file:///1991868.png
 keywords:
 - operator
 name: redis-sentinel-operator
-version: 4.4.0
+version: 4.4.3

@@ -1,0 +1,21 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: redisfailover-servicemonitor
+spec:
+  endpoints:
+  - basicAuth:
+      password:
+        key: password
+        name: redis-failover-exporter-auth
+      username:
+        key: user
+        name: redis-failover-exporter-auth
+    port: http-metrics
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      app.kubernetes.io/managed-by: redis-operator
+      app.kubernetes.io/component: redis
+      app.kubernetes.io/part-of: redis-failover

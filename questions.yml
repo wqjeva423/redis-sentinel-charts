@@ -9,7 +9,7 @@ questions:
   group: "Redis Operator Settings"
   required: true
 - variable: image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-sentinel-operator:v4.3.8"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-sentinel-operator:v4.3.9"
   description: "Redis-Sentinel-Operator镜像地址"
   type: string
   label: Redis Sentinel Operator Image
@@ -39,7 +39,7 @@ questions:
   label: Redis 6.0 image
   group: "Container Images"
 - variable: exporterimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_exporter:v1.3.5-alpine"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_exporter:v1.59.0-auth"
   description: "Redis-exporter镜像地址"
   type: string
   label: redis exporter image

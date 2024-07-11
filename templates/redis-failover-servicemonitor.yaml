@@ -12,6 +12,7 @@ spec:
         key: user
         name: redis-failover-exporter-auth
     port: http-metrics
+    interval: 15s
   namespaceSelector:
     any: true
   selector:

@@ -9,7 +9,7 @@ questions:
   group: "Redis Operator Settings"
   required: true
 - variable: image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-sentinel-operator:v4.3.9"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-sentinel-operator:v4.3.10"
   description: "Redis-Sentinel-Operator镜像地址"
   type: string
   label: Redis Sentinel Operator Image

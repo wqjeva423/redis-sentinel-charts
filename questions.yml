@@ -33,7 +33,7 @@ questions:
   label: Redis 5.0 image
   group: "Container Images"
 - variable: redis6image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis:6.2.16"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis:6.2.17"
   description: "Redis6.0镜像地址"
   type: string
   label: Redis 6.0 image

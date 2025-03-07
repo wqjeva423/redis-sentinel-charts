@@ -1,0 +1,13 @@
+name: Redis Sentinel Controllers
+description: Redis Sentinel集群部署及管理模块
+single: true
+chartName: redis-sentinel-controllers
+appType: redis-sentinel
+packageType: controller
+version: v0.0.1
+dependOn:
+  - name: redis-sentinel-crds
+    version: v0.0.1
+upgradeOn:
+  - name: redis-sentinel-controllers
+    version: v0.0.0

@@ -1,0 +1,11 @@
+name: Redis Sentinel CRDs
+description: Redis Sentinel 集群声明模块
+single: true
+chartName: redis-sentinel-crds
+appType: redis-sentinel
+packageType: crd
+version: v0.0.1
+dependOn:
+upgradeOn:
+- name: redis-sentinel-crds
+  version: v0.0.0

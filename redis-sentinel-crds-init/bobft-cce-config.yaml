@@ -4,6 +4,6 @@ single: true
 chartName: redis-sentinel-crds
 appType: redis-sentinel
 packageType: crd
-version: v0.0.0
+version: 0.0.0
 dependOn:
 upgradeOn:

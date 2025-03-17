@@ -1,5 +1,6 @@
 apiVersion: v2
 name: redis-sentinel-crds
+icon: file:///1991868.png
 description: A Helm chart3 for BOB Operator for Redis Sentinel CRDs
 type: application
 version: 0.0.1

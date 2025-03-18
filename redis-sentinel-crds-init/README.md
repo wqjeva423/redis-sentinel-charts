@@ -1,6 +1,6 @@
 # Redis Sentinel CRDs
 
-## 功能说明
+### 功能说明
 
 1.用于在kubernetes集群中对Redis Sentinel数据库声明
 

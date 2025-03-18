@@ -1,6 +1,6 @@
-## [Redis Sentinel Operator](http://redis.io/)
+# [Redis Sentinel Operator](http://redis.io/)
 
-####  redis-sentinel-operator：
+###  redis-sentinel-operator：
 
 * 提供针对redis-sentinel集群的部署管理
 

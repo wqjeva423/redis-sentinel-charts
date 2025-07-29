@@ -12,7 +12,7 @@ questions:
   tips: ""
   edit: true
 - variable: image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-sentinel-operator:v4.3.12"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis-sentinel-operator:v4.3.12"
   description: "Redis-Sentinel-Operator镜像地址"
   type: string
   label: Redis Sentinel Operator Image
@@ -22,7 +22,7 @@ questions:
   tips: ""
   edit: true
 - variable: backupimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis-backup-operator:v2.2.1-rc7"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis-backup-operator:v2.2.1-rc7"
   description: "Redis-Backup-Operator镜像地址"
   type: string
   label: Redis Backup Operator Image
@@ -32,7 +32,7 @@ questions:
   tips: ""
   edit: true
 - variable: sidecarimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/s3cmd:v3.0.0"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/s3cmd:v3.0.0"
   description: "S3cmd镜像地址"
   type: string
   label: S3cmd Image
@@ -42,7 +42,7 @@ questions:
   tips: ""
   edit: true
 - variable: redis5image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis:5.0"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis:5.0"
   description: "Redis5.0镜像地址"
   type: string
   label: Redis 5.0 image
@@ -52,7 +52,7 @@ questions:
   tips: ""
   edit: true
 - variable: redis6image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis:6.2.19"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis:6.2.19"
   description: "Redis6.0镜像地址"
   type: string
   label: Redis 6.0 image
@@ -62,7 +62,7 @@ questions:
   tips: ""
   edit: true
 - variable: exporterimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_exporter:v1.59.0-auth"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis_exporter:v1.59.0-auth"
   description: "Redis-exporter镜像地址"
   type: string
   label: redis exporter image
@@ -72,7 +72,7 @@ questions:
   tips: ""
   edit: true
 - variable: toolsimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_tools:v0.2.7"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis_tools:v0.2.7"
   description: "Redis-tools镜像地址"
   type: string
   label: redis tools image
@@ -82,7 +82,7 @@ questions:
   tips: ""
   edit: true
 - variable: topkeyimage
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis_topkeys:v0.2.1"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis_topkeys:v0.2.1"
   description: "Redis-topkey镜像地址"
   type: string
   label: redis topkey image

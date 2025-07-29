@@ -50,6 +50,10 @@ spec:
             value: {{ .Values.toolsimage }}
           - name: topkey_image
             value: {{ .Values.topkeyimage }}
+          - name: redis_version_latest
+            value: {{ .Values.redisversionlatest }}
+          - name: redis_version_old
+            value: {{ .Values.redisversionold }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         ports:

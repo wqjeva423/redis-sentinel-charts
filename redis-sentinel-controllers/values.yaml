@@ -23,6 +23,10 @@ toolsimage: tools
 
 topkeyimage: topkey
 
+redisversionlatest: redis
+
+redisversionold: redis
+
 podAnnotations: {}
 
 resources:

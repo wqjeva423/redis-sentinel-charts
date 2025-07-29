@@ -52,7 +52,7 @@ questions:
   tips: ""
   edit: true
 - variable: redis6image
-  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis:6.2.17"
+  default: "dev.repo.bj.bob/bob-docker-dev-local/func/redis:6.2.19"
   description: "Redis6.0镜像地址"
   type: string
   label: Redis 6.0 image
@@ -86,6 +86,26 @@ questions:
   description: "Redis-topkey镜像地址"
   type: string
   label: redis topkey image
+  group: "Container Images"
+  required: true
+  chartName: true
+  tips: ""
+  edit: true
+- variable: redisversionlatest
+  default: "redis:6.2.19"
+  description: "Redis最新版本"
+  type: string
+  label: redis version latest
+  group: "Container Images"
+  required: true
+  chartName: true
+  tips: ""
+  edit: true
+- variable: redisversionold
+  default: "redis:6.2.17;redis:6.2.16;redis:6.0;redis:5.0"
+  description: "Redis老版本"
+  type: string
+  label: redis version old
   group: "Container Images"
   required: true
   chartName: true

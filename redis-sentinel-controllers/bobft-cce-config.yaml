@@ -4,10 +4,10 @@ single: true
 chartName: redis-sentinel-controllers
 appType: redis-sentinel
 packageType: controller
-version: 0.0.1
+version: 0.0.2
 dependOn:
   - name: redis-sentinel-crds
     version: 0.0.1
 upgradeOn:
   - name: redis-sentinel-controllers
-    version: 0.0.0
+    version: 0.0.1

@@ -22,7 +22,7 @@ questions:
   tips: ""
   edit: true
 - variable: backupimage
-  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis-backup-operator:v2.2.1-rc7"
+  default: "dev.repo.bj.bob/public-docker-baseimage-local/func/redis-backup-operator:v2.3.0"
   description: "Redis-Backup-Operator镜像地址"
   type: string
   label: Redis Backup Operator Image

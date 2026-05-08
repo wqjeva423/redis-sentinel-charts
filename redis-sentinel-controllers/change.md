@@ -1,4 +1,4 @@
-## v0.0.3
+## v0.0.4
 
-### 1.新增redis主从切换功能
-### 2.增加redis内部命令运维专用controller：redisoperate
+### 1.Op容器新增readinessProbe
+### 2.Op容器新增livenessProbe

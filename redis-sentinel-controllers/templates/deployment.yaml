@@ -60,6 +60,22 @@ spec:
         - containerPort: 9710
           name: metrics
           protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 20
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+          tcpSocket:
+            port: 9710
+        livenessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 20
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+          tcpSocket:
+            port: 9710
       - name: "{{ .Values.backupContainerName }}"
         image: {{ .Values.backupimage }}
         imagePullPolicy: {{ .Values.pullPolicy }}

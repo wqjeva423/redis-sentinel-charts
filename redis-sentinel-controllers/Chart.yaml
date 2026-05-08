@@ -3,5 +3,5 @@ description: A Helm chart for the Redis Sentinel Operator
 icon: file:///1991868.png
 name: redis-sentinel-controllers
 type: application
-version: 0.0.3
-appVersion: 0.0.3
+version: 0.0.4
+appVersion: 0.0.4
